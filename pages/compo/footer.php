@@ -1,0 +1,1 @@
+<footer class="bg-black text-center text-secondary py-3">© 2026 SmartEstate</footer>
