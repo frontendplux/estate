@@ -8,8 +8,6 @@ git remote add origin https://github.com/frontendplux/estate.git
 git push -u origin main
 
 
-
-
 git add .
 git commit -m "first commit"
 git push origin main
