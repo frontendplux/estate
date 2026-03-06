@@ -10,23 +10,20 @@ class Database {
     public $conn;
 
     public function connect() {
+        
+$server = $_SERVER['HTTP_HOST'] ?? '';
 
-        $server = $_SERVER['HTTP_HOST'] ?? '';
-
-        // LOCAL SERVER
-        if ($server === 'localhost' || $server === '127.0.0.1') {
-            $this->host = "localhost";
-            $this->user = "root";
-            $this->pass = "";
-            $this->dbname = "biyi_estate";
-        } 
-        // LIVE SERVER
-        else {
-            $this->host = "sql212.infinityfree.com";
-            $this->user = "if0_41324184";
-            $this->pass = "K7e9VcU95OT8UdF";
-            $this->dbname = "if0_41324184_air9ja";
-        }
+if (in_array($server, ['localhost','127.0.0.1','localhost:3000','127.0.0.1:3000'])) {
+    $this->host = "localhost";
+    $this->user = "root";
+    $this->pass = "";
+    $this->dbname = "biyi_estate";
+} else {
+    $this->host = "sql212.infinityfree.com";
+    $this->user = "if0_41324184";
+    $this->pass = "K7e9VcU95OT8UdF";
+    $this->dbname = "if0_41324184_air9ja";
+}
 
         // Connect to MySQL server
         $this->conn = new mysqli(

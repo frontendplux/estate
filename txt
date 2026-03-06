@@ -6,3 +6,9 @@ npm run dev -- --host
  
 
  php -S 0.0.0.0:3000
+
+
+
+ git add .
+git commit -m "update"
+git push
