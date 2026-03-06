@@ -1,0 +1,50 @@
+{
+"subject": "mailto: <frontendplux@gmail.com>",
+"publicKey": "BBYXvq1PxO2cbiObWyYyqQWVMBSM_mPQhuTQ_4b_b9h2nTezZ9NOcZglfcr4KXBFSyZQixoxbppWVDvFhIxD4C0",
+"privateKey": "kIipYEdGgUxoWg9LUL5d7rWtVg8K9ej79qppUfHsdrk"
+}
+
+
+
+npm init -y
+npm install browser-sync --save-dev
+npx browser-sync start --proxy "localhost:3000" --files "**/*.*"
+
+
+
+
+
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin https://github.com/frontendplux/monieflow.git
+git branch -M main
+git push -u origin main
+
+git add .
+git commit -m "v1"
+git push origin main
+
+
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyAUaUezJ3wHfMcmWijG7uGi6deimQZ9Ftw",
+  authDomain: "biyi-homes.firebaseapp.com",
+  projectId: "biyi-homes",
+  storageBucket: "biyi-homes.firebasestorage.app",
+  messagingSenderId: "124536411509",
+  appId: "1:124536411509:web:768e270890e3f0e10b2f3c",
+  measurementId: "G-7RZK3YYX5Y"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);

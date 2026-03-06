@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biyi Estate Management | Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            50: '#fdf9ec',
+                            100: '#f9f0ce',
+                            200: '#f1df9c',
+                            300: '#e7c762',
+                            400: '#deac36',
+                            500: '#d4af37', // Brand Gold
+                            600: '#b8860b',
+                            700: '#94660e',
+                        },
+                        dark: '#121212',
+                    },
+                    borderRadius: {
+                        'xl': '1.5rem',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
+        .gold-gradient { background: linear-gradient(135deg, #d4af37 0%, #b8860b 100%); }
+        .property-card:hover img { transform: scale(1.05); }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans text-dark antialiased">
+
+    <nav class="sticky top-0 z-50 glass border-b border-gold-100 px-4 py-3 flex justify-between items-center">
+        <div class="flex items-center gap-2">
+            <div class="w-10 h-10 bg-gold-500 rounded-lg flex items-center justify-center text-white shadow-lg shadow-gold-200">
+                <i class="fa-solid fa-house-chimney"></i>
+            </div>
+            <span class="font-bold text-lg tracking-tight">BIYI <span class="text-gold-500">ESTATE</span></span>
+        </div>
+        <button class="bg-dark text-white p-2 rounded-full w-10 h-10 flex items-center justify-center">
+            <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+    </nav>
+
+    <main class="max-w-md mx-auto pb-24">
+        
+        <section class="p-4">
+            <div class="gold-gradient rounded-3xl p-6 text-white shadow-2xl shadow-gold-200 relative overflow-hidden">
+                <div class="relative z-10">
+                    <span class="bg-white/20 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest">Limited Offer</span>
+                    <h1 class="text-2xl font-extrabold mt-3 leading-tight">Refer & Win <br><span class="text-3xl">₦40,000.00</span></h1>
+                    <p class="text-gold-100 text-sm mt-2 opacity-90">Earn a token for every successful referral today.</p>
+                    <button class="mt-4 bg-white text-gold-600 font-bold px-6 py-2 rounded-xl shadow-lg hover:bg-gold-50 transition-all">
+                        Invite Friends <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </button>
+                </div>
+                <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-white/10 rounded-full blur-2xl"></div>
+            </div>
+        </section>
+
+        <section class="px-4 mt-2">
+            <div class="relative">
+                <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                <input type="text" placeholder="Search expensive or cheap apartments..." 
+                    class="w-full bg-white border-none shadow-sm rounded-2xl py-4 pl-12 pr-4 focus:ring-2 focus:ring-gold-500 transition-all">
+                <div class="absolute right-3 top-1/2 -translate-y-1/2 bg-gold-100 p-2 rounded-lg text-gold-600">
+                    <i class="fa-solid fa-sliders"></i>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-8 px-4">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="font-bold text-xl">Property Categories</h2>
+                <a href="#" class="text-gold-600 text-sm font-semibold">View All</a>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-4">
+                <div class="property-card group bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 transition-all hover:shadow-xl">
+                    <div class="relative overflow-hidden h-32">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=400" class="w-full h-full object-cover transition-transform duration-500">
+                        <span class="absolute top-2 left-2 bg-dark/70 text-white text-[10px] px-2 py-1 rounded-md backdrop-blur-md">Premium</span>
+                    </div>
+                    <div class="p-3">
+                        <h3 class="font-bold text-sm">Luxury Stay</h3>
+                        <p class="text-gold-600 font-bold text-xs mt-1">High Budget</p>
+                    </div>
+                </div>
+
+                <div class="property-card group bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 transition-all hover:shadow-xl">
+                    <div class="relative overflow-hidden h-32">
+                        <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=400" class="w-full h-full object-cover transition-transform duration-500">
+                        <span class="absolute top-2 left-2 bg-green-600/80 text-white text-[10px] px-2 py-1 rounded-md backdrop-blur-md">Best Value</span>
+                    </div>
+                    <div class="p-3">
+                        <h3 class="font-bold text-sm">Budget Suite</h3>
+                        <p class="text-gold-600 font-bold text-xs mt-1">Low Budget</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-8 px-4">
+            <div class="bg-dark rounded-3xl p-6 text-white relative overflow-hidden">
+                <div class="relative z-10">
+                    <div class="flex items-center gap-2 text-gold-400 mb-2">
+                        <i class="fa-solid fa-vr-cardboard text-2xl"></i>
+                        <span class="text-xs font-bold tracking-widest uppercase">Digital Experience</span>
+                    </div>
+                    <h2 class="text-xl font-bold">See Before You Inspect</h2>
+                    <p class="text-gray-400 text-sm mt-2 leading-relaxed">Avoid unnecessary stress. Take a high-definition 360° tour of your dream home right from your phone.</p>
+                    <button class="mt-5 w-full bg-gold-500 hover:bg-gold-600 text-white font-bold py-3 rounded-xl transition-colors">
+                        Launch Virtual Tour
+                    </button>
+                </div>
+                <div class="absolute right-[-20%] top-0 opacity-20 transform rotate-12">
+                    <i class="fa-solid fa-city text-[150px]"></i>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-6 px-4">
+            <div class="flex items-center gap-4 bg-white p-5 rounded-3xl border border-gold-100 shadow-sm">
+                <div class="bg-gold-50 w-14 h-14 rounded-2xl flex items-center justify-center text-gold-600 text-2xl">
+                    <i class="fa-solid fa-shield-heart"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold">No Excess Charges</h3>
+                    <p class="text-gray-500 text-xs mt-1">Total transparency. We don't hide fees.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="fixed bottom-0 left-0 right-0 glass border-t border-gray-100 px-6 py-4 flex justify-between items-center max-w-md mx-auto">
+        <button class="text-gold-600 flex flex-col items-center gap-1">
+            <i class="fa-solid fa-house"></i>
+            <span class="text-[10px] font-bold">Home</span>
+        </button>
+        <button class="text-gray-400 flex flex-col items-center gap-1">
+            <i class="fa-solid fa-heart"></i>
+            <span class="text-[10px] font-medium">Saved</span>
+        </button>
+        <button class="bg-gold-500 text-white w-12 h-12 rounded-2xl shadow-lg shadow-gold-200 -mt-10 flex items-center justify-center">
+            <i class="fa-solid fa-plus text-xl"></i>
+        </button>
+        <button class="text-gray-400 flex flex-col items-center gap-1">
+            <i class="fa-solid fa-user-group"></i>
+            <span class="text-[10px] font-medium">Refer</span>
+        </button>
+        <button class="text-gray-400 flex flex-col items-center gap-1">
+            <i class="fa-solid fa-circle-user"></i>
+            <span class="text-[10px] font-medium">Profile</span>
+        </button>
+    </div>
+
+</body>
+</html>
